@@ -4,6 +4,8 @@ import LandingPage from './Components/pages/LandingPage'
 import Register from './Components/pages/Register'
 import Login from './Components/pages/Login'
 import UserDashboard from './users/user/UserDashboard'
+import CreateToDo from './users/user/CreateToDo'
+import ViewTodo from './users/user/ViewTodo'
 const App = () => {
   return (
    
@@ -16,6 +18,10 @@ const App = () => {
           <Route path='/login' element = {<Login/>}/>
 
           <Route path='/user' element = {<UserDashboard/>}/>
+
+          <Route path='/createtodo' element = {<CreateToDo/>}/>
+
+          <Route path = '/viewtodo' element = {<ViewTodo/>}/>
           
         </Routes>
       </Router>

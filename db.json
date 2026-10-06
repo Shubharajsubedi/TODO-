@@ -19,6 +19,19 @@
       "id": "4u8RRKUKz5Q"
     }
   ],
-  "todo": [],
+  "todo": [
+    {
+      "task": "Read AI/ML.",
+      "id": "oTeKpOUupE4"
+    },
+    {
+      "task": "Python",
+      "id": "eryrIc02XC0"
+    },
+    {
+      "task": "Machine Learning",
+      "id": "Ue3BIgG7Mxo"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

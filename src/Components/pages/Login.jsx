@@ -35,31 +35,109 @@ const Login = () => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit(handleLogin)}>
-        <label>Email : </label>
+  
+<div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
+
+  {/* Login Card */}
+  <div className="bg-white w-full max-w-md p-8 rounded-xl shadow-md">
+
+    {/* Heading */}
+    <div className="text-center mb-6">
+      <h2 className="text-3xl font-bold text-gray-800">
+        Welcome Back
+      </h2>
+
+      <p className="text-gray-500 mt-2">
+        Login to manage your daily tasks
+      </p>
+    </div>
+
+
+    {/* Login Form */}
+    <form onSubmit={handleSubmit(handleLogin)}>
+
+      {/* Email */}
+      <div className="mb-4">
+
+        <label className="block text-gray-700 font-medium mb-2">
+          Email
+        </label>
+
         <input
           type="email"
-          {...register('email', { required: 'Email is required' })}
-        />
-        {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
-
-        <label>Password: </label>
-        <input
-          type="password"
-          {...register('password', {
-            required: 'Password is required',
-            minLength: { value: 3, message: 'Password cannot be less than 8 characters.' },
+          placeholder="Enter your email"
+          className="w-full border border-gray-300 rounded-lg px-4 py-3
+                     focus:outline-none focus:ring-2 focus:ring-blue-500"
+          {...register('email', {
+            required: 'Email is required'
           })}
         />
-        {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
 
-        {error && <p className='text-red-500'>{error}</p> }
-        
+        {/* Email Error */}
+        {errors.email && (
+          <p className="text-red-500 text-sm mt-1">
+            {errors.email.message}
+          </p>
+        )}
 
-        <button type="submit">Login</button>
-      </form>
-    </div>
+      </div>
+
+
+      {/* Password */}
+      <div className="mb-4">
+
+        <label className="block text-gray-700 font-medium mb-2">
+          Password
+        </label>
+
+        <input
+          type="password"
+          placeholder="Enter your password"
+          className="w-full border border-gray-300 rounded-lg px-4 py-3
+                     focus:outline-none focus:ring-2 focus:ring-blue-500"
+          {...register('password', {
+            required: 'Password is required',
+            minLength: {
+              value: 3,
+              message: 'Password cannot be less than 3 characters.'
+            },
+          })}
+        />
+
+        {/* Password Error */}
+        {errors.password && (
+          <p className="text-red-500 text-sm mt-1">
+            {errors.password.message}
+          </p>
+        )}
+
+      </div>
+
+
+      {/* API/Login Error */}
+      {error && (
+        <p className="text-red-500 text-sm text-center mb-4">
+          {error}
+        </p>
+      )}
+
+
+      {/* Login Button */}
+      <button
+        type="submit"
+        className="w-full bg-blue-600 text-white py-3 rounded-lg
+                   font-medium hover:bg-blue-700 transition duration-200"
+      >
+        Login
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
   )
 }
 

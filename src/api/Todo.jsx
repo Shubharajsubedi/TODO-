@@ -1,8 +1,9 @@
-const API = ({
-    baseUrl: "http://localhost:3000"
+import axios from "axios"
+const API = axios.create({
+    baseURL: "http://localhost:3000"
 })
 
-export const createTodo = (payload) => API.post("/todo",payload)
+export const createTodo = (data) => API.post("/todo",data)
 
 export const getTodo = () => API.get("/todo")
 
