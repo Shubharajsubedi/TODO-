@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "username": "ram",
+      "email": "ram@gmail.com",
+      "password": "ram",
+      "id": "kENKXEGq4l4"
+    },
+    {
+      "username": "un",
+      "email": "shubharaj.subedis.24@cps.edu.np",
+      "password": "un",
+      "id": "2voSrATxzFw"
+    },
+    {
+      "username": "superman",
+      "email": "superman@gmail.com",
+      "password": "superman",
+      "id": "4u8RRKUKz5Q"
+    }
+  ],
+  "todo": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
